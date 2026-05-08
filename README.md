@@ -107,25 +107,3 @@ The validation set includes:
 - `_resX.pdb` files: Electron density point clouds at different resolutions (1.5Å, 2.7Å, 3.5Å, 5.0Å, 8.0Å)
 
 The model is trained on a larger dataset of protein-ligand complexes with corresponding ED maps.
-
-## Evaluation
-
-EDMolGPT was evaluated on 101 biological targets and demonstrates:
-- Improved binding affinity predictions
-- Enhanced scaffold diversity compared to traditional methods
-- Better coverage of chemical space
-- Physically realistic molecule conformations
-
-## Citation
-
-Please cite our paper if you use this code:
-
-```bibtex
-@inproceedings{edmolgpt2026,
-  title={From Holo Pockets to Electron Density: GPT-style Drug Design with Density},
-  author={[Your Names Here]},
-  booktitle={Proceedings of the 43rd International Conference on Machine Learning (ICML 2026)},
-  year={2026}
-}
-```
-
