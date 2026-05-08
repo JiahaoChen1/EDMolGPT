@@ -31,9 +31,6 @@ The project requires Python 3.9+ and several dependencies. We recommend using Co
 conda env create -f mole.yaml
 conda activate mole
 
-# Verify installation
-python -c "from rdkit import Chem; print('RDKit version:', Chem.__version__)"
-python -c "import torch; print('PyTorch version:', torch.__version__)"
 ```
 
 ### Manual Installation
@@ -63,7 +60,7 @@ This will:
 1. Load the pre-trained model (from `./9_31454_4.pt`)
 2. Process electron density files from `./valset_large/`
 3. Generate molecules for each target
-4. Save results in `./dude_exped/` directory
+
 
 ### Parameters
 
@@ -71,7 +68,7 @@ This will:
 
 ### Output
 
-Generated molecules will be saved as `.mol` files in the `./dude_exped/` directory, organized by target.
+Generated molecules will be saved as `.mol` files in the `./outputs` directory, organized by target.
 
 ## Project Structure
 
@@ -132,10 +129,3 @@ Please cite our paper if you use this code:
 }
 ```
 
-## Contact
-
-For questions about the code or paper, please contact [Your Contact Information].
-
-## License
-
-[Add your license information here]
