@@ -183,8 +183,8 @@ def infer_case(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="EDMolGPT Inference")
     parser.add_argument("--gpu", help="GPU device ID (-1 for CPU)", type=int, default=-1)
-    parser.add_argument("--model", help="Path to model checkpoint", type=str, default="./9_31454_4.pt")
-    parser.add_argument("--input", help="Input directory with ED data", type=str, default="./valset_large")
+    parser.add_argument("--model", help="Path to model checkpoint", type=str, default="")
+    parser.add_argument("--input", help="Input directory with ED data", type=str, default="")
     parser.add_argument("--output", help="Output directory for generated molecules", type=str, default="./outputs")
     parser.add_argument("--num", help="Number of molecules to generate per target", type=int, default=100)
 

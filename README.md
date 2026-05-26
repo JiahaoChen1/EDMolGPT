@@ -46,7 +46,7 @@ pip install rdkit-pypi
 pip install transformers accelerate numpy pandas scipy matplotlib tqdm pyyaml
 ```
 
-## Usage
+### Usage
 
 ### Inference
 
@@ -57,14 +57,22 @@ python main.py --gpu 0
 ```
 
 This will:
-1. Load the pre-trained model (from `./9_31454_4.pt`)
-2. Process electron density files from `./valset_large/`
+1. Load the pre-trained model 
+2. Process electron density files from 
 3. Generate molecules for each target
 
+### Checkpoint
+Our [checkpoint](https://drive.google.com/drive/folders/1ws1crHd4CmQqdRvipnG-zVC5wnHc_IkP?usp=drive_link) is available. Both Caled and Exped are open. Please select the appropriate weights for the corresponding densities when generating molecules. 
 
 ### Parameters
 
 - `--gpu`: GPU device ID to use (default: -1 for CPU)
+- `--model`: Path to model checkpoint
+- `--input`: Input directory with ED data
+
+### EDs
+
+The caled folder in the EDs folder contains calculated densities, and the exped folder contains experimental densities; both are from DUD-E reference ligand preparation.
 
 ### Output
 
@@ -78,6 +86,9 @@ EDMolGPT/
 ├── mole.yaml            # Conda environment configuration
 ├── README.md            # This file
 ├── valset_large/        # Validation set with target structures and ED data
+├── EDs/                 # EDs for DUD-E datasets
+│   ├── caled                       # Caled for DUD-E datasets
+│   └── exped                       # Exped for DUD-E datasets
 ├── dataloader/          # Data loading utilities
 │   ├── dataloader_pointcloud.py    # Point cloud data loader
 │   └── data_utils.py               # Data reading and processing functions
@@ -87,7 +98,7 @@ EDMolGPT/
 │   ├── ligand_code_util.py    # Ligand encoding/decoding
 │   ├── find_root.py          # Root finding algorithm
 │   └── fragmol_frag_zyh.py   # Fragment-based molecule generation
-└── 9_31454_4.pt         # Pre-trained model checkpoint
+
 ```
 
 ## Model Architecture
